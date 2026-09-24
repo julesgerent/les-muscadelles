@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Muscadelles - Accueil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        
+        :root {
+            --bg-color: #FDFBF7;
+            --text-color: #2C2A29;
+            --accent-color: #D4B895;
+            --header-bg: rgba(253, 251, 247, 0.8);
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+            --border-radius: 12px;
+        }
+        [data-color-scheme="dark"] {
+            --bg-color: #1A1817;
+            --text-color: #FDFBF7;
+            --accent-color: #B89C7A;
+            --header-bg: rgba(26, 24, 23, 0.8);
+        }
+
+        [data-theme="theme2"] {
+            --bg-color: #FFFFFF; --text-color: #111111; --accent-color: #555555;
+            --header-bg: rgba(255, 255, 255, 0.8);
+            --font-heading: 'Inter', sans-serif; --border-radius: 8px;
+        }
+        [data-theme="theme2"][data-color-scheme="dark"] {
+            --bg-color: #0A0A0A; --text-color: #EEEEEE; --accent-color: #AAAAAA;
+            --header-bg: rgba(10, 10, 10, 0.8);
+        }
+
+        [data-theme="theme3"] {
+            --bg-color: #F4F7F4; --text-color: #2C3E2D; --accent-color: #8DA98D;
+            --header-bg: rgba(244, 247, 244, 0.8);
+            --font-heading: 'Inter', sans-serif; --border-radius: 16px;
+        }
+        [data-theme="theme3"][data-color-scheme="dark"] {
+            --bg-color: #1E291E; --text-color: #E2E8E2; --accent-color: #6C886C;
+            --header-bg: rgba(30, 41, 30, 0.8);
+        }
+
+        [data-theme="theme4"] {
+            --bg-color: #F0EFEB; --text-color: #3A3836; --accent-color: #928C84;
+            --header-bg: rgba(240, 239, 235, 0.8);
+            --font-heading: 'Playfair Display', serif; --border-radius: 10px;
+        }
+        [data-theme="theme4"][data-color-scheme="dark"] {
+            --bg-color: #262524; --text-color: #D6D4D0; --accent-color: #A39E96;
+            --header-bg: rgba(38, 37, 36, 0.8);
+        }
+
+        [data-theme="theme5"] {
+            --bg-color: #FAFCFF; --text-color: #1E3A5F; --accent-color: #79A3D1;
+            --header-bg: rgba(250, 252, 255, 0.8);
+            --font-heading: 'Inter', sans-serif; --border-radius: 20px;
+        }
+        [data-theme="theme5"][data-color-scheme="dark"] {
+            --bg-color: #0D1623; --text-color: #E6F0FA; --accent-color: #4A7BAE;
+            --header-bg: rgba(13, 22, 35, 0.8);
+        }
+
+        [data-theme="theme6"] {
+            --bg-color: #FFFAFC; --text-color: #4A2B23; --accent-color: #D36C52;
+            --header-bg: rgba(255, 250, 252, 0.8);
+            --font-heading: 'Playfair Display', serif; --border-radius: 14px;
+        }
+        [data-theme="theme6"][data-color-scheme="dark"] {
+            --bg-color: #241411; --text-color: #F8EAE6; --accent-color: #B55038;
+            --header-bg: rgba(36, 20, 17, 0.8);
+        }
+
+        [data-theme="theme7"] {
+            --bg-color: #F5F6F8; --text-color: #0F172A; --accent-color: #334155;
+            --header-bg: rgba(245, 246, 248, 0.8);
+            --font-heading: 'Playfair Display', serif; --border-radius: 12px;
+        }
+        [data-theme="theme7"][data-color-scheme="dark"] {
+            --bg-color: #0B101E; --text-color: #F8FAFC; --accent-color: #94A3B8;
+            --header-bg: rgba(11, 16, 30, 0.8);
+        }
+
+        [data-theme="theme8"] {
+            --bg-color: #F9F8F6; --text-color: #42403E; --accent-color: #B0ADA6;
+            --header-bg: rgba(249, 248, 246, 0.8);
+            --font-heading: 'Inter', sans-serif; --border-radius: 24px;
+        }
+        [data-theme="theme8"][data-color-scheme="dark"] {
+            --bg-color: #2A2826; --text-color: #E3E1DE; --accent-color: #85827C;
+            --header-bg: rgba(42, 40, 38, 0.8);
+        }
+
+        [data-theme="theme9"] {
+            --bg-color: #FFFDF5; --text-color: #3B3315; --accent-color: #CBAA3A;
+            --header-bg: rgba(255, 253, 245, 0.8);
+            --font-heading: 'Playfair Display', serif; --border-radius: 8px;
+        }
+        [data-theme="theme9"][data-color-scheme="dark"] {
+            --bg-color: #1A170A; --text-color: #F5EEDB; --accent-color: #A38621;
+            --header-bg: rgba(26, 23, 10, 0.8);
+        }
+
+        [data-theme="theme10"] {
+            --bg-color: #FFFFFF; --text-color: #000000; --accent-color: #000000;
+            --header-bg: rgba(255, 255, 255, 0.9);
+            --font-heading: 'Inter', sans-serif; --border-radius: 4px;
+        }
+        [data-theme="theme10"][data-color-scheme="dark"] {
+            --bg-color: #000000; --text-color: #FFFFFF; --accent-color: #FFFFFF;
+            --header-bg: rgba(0, 0, 0, 0.9);
+        }
+
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.4s ease, color 0.4s ease;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, .brand {
+            font-family: var(--font-heading);
+            font-weight: 600;
+        }
+
+        a { text-decoration: none; color: inherit; transition: opacity 0.3s ease; }
+        a:hover { opacity: 0.7; }
+
+           
+        header {
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            background: var(--header-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand { font-size: 1.5rem; letter-spacing: 1px; }
+
+        nav { display: flex; gap: 30px; align-items: center; }
+        nav a { font-size: 0.95rem; font-weight: 400; }
+
+        .config-panel {
+            display: flex; gap: 15px; align-items: center;
+            background: var(--bg-color);
+            padding: 8px 15px;
+            border-radius: 50px;
+            border: 1px solid var(--accent-color);
+        }
+        
+        select, button {
+            background: transparent;
+            color: var(--text-color);
+            border: none;
+            font-family: inherit;
+            cursor: pointer;
+            outline: none;
+        }
+        
+        button.theme-toggle {
+            padding: 5px 10px;
+            border: 1px solid var(--accent-color);
+            border-radius: var(--border-radius);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+           
+        .hero {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            background-image: url('https://images.squarespace-cdn.com/content/v1/6001ce695a503d6d70ef3775/eaea5bb8-c401-4aee-99a2-dddd97c831c2/villa-luxe-sud-france-eygalieres.jpeg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(
+                to bottom, 
+                rgba(0,0,0,0.3) 0%, 
+                rgba(0,0,0,0.5) 70%, 
+                var(--bg-color) 100%
+            );
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 6vw, 6rem);
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .btn-reserve {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            border-radius: var(--border-radius);
+            margin-top: 20px;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+        .btn-reserve:hover {
+            transform: translateY(-3px);
+            filter: brightness(1.1);
+            opacity: 1;
+        }
+           
+        main { padding: 80px 5%; max-width: 1200px; margin: 0 auto; text-align: center; }
+        
+        .description {
+            max-width: 800px;
+            margin: 0 auto 60px auto;
+        }
+        .description h2 { font-size: 2rem; margin-bottom: 25px; color: var(--accent-color); }
+        .description p { font-size: 1.1rem; margin-bottom: 15px; opacity: 0.9; }
+
+        footer {
+            padding: 60px 5%;
+            background-color: transparent;
+            border-top: 1px solid rgba(128,128,128,0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        @media (max-width: 900px) {
+            header { flex-direction: column; gap: 15px; padding: 15px; }
+            nav { flex-wrap: wrap; justify-content: center; }
+            .config-panel { margin-top: 10px; }
+            footer { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="brand">Les Muscadelles</div>
+        <nav>
+            <a href="#">Accueil</a>
+            <a href="#">Réserver</a>
+            <a href="#">Photos</a>
+            <a href="#">Contact</a>
+            <a href="#">Instagram</a>
+        </nav>
+        
+        <div class="config-panel">
+            <select id="themeSelector">
+                <option value="theme1">Thème 1</option>
+                <option value="theme2">Thème 2</option>
+                <option value="theme3">Thème 3</option>
+                <option value="theme4">Thème 4</option>
+                <option value="theme5">Thème 5</option>
+                <option value="theme6">Thème 6</option>
+                <option value="theme7">Thème 7</option>
+                <option value="theme8">Thème 8</option>
+                <option value="theme9">Thème 9</option>
+                <option value="theme10">Thème 10</option>
+            </select>
+            <button class="theme-toggle" id="darkModeToggle">Clair / Sombre</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Les Muscadelles</h1>
+            <a href="#" class="btn-reserve">Réservez dès maintenant</a>
+        </div>
+    </section>
+
+    <main>
+        <section class="description">
+            <h2>Petit titre</h2>
+            <p>Description rapide de la maison</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact-item">+33 6 00 00 00 00</div>
+        <div class="contact-item">adressemail@gmail.com</div>
+        <div class="contact-item"><a href="#">@les_muscadelles</a></div>
+    </footer>
+
+    <script>
+        const themeSelector = document.getElementById('themeSelector');
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const html = document.documentElement;
+
+        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+        if (prefersDarkScheme.matches) {
+            html.setAttribute('data-color-scheme', 'dark');
+        } else {
+            html.setAttribute('data-color-scheme', 'light');
+        }
+
+        themeSelector.addEventListener('change', (e) => {
+            html.setAttribute('data-theme', e.target.value);
+        });
+
+        darkModeToggle.addEventListener('click', () => {
+            const currentScheme = html.getAttribute('data-color-scheme');
+            if (currentScheme === 'dark') {
+                html.setAttribute('data-color-scheme', 'light');
+            } else {
+                html.setAttribute('data-color-scheme', 'dark');
+            }
+        });
+    </script>
+
+</body>
+</html>
